@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import VM from 'scratch-vm';
 import Box from '../components/box/box.jsx';
-import greenFlag from '../components/green-flag/icon--green-flag.svg';
+import DrScratchLogo from '../components/dr-scratch/drscratch_logo.png';
+import logo from "../components/dr-scratch/dr-scratch.css";
 
 import {projectTitleInitialState} from '../reducers/project-title';
 import downloadBlob from '../lib/download-blob';
@@ -48,7 +49,7 @@ class DrScratchScore extends React.Component {
     }
 
     handleClick () {
-        console.log("ComputerThinkingScore")
+        console.log("handle DrScratchScore...")
         // this.setState(state => ({
         //   logic: state.logic + 1
         // }));
@@ -130,8 +131,9 @@ class DrScratchScore extends React.Component {
     render() {
         return (
             <div>
-                <span onClick={this.handleClick}>[ 評量開始 ]</span>
-                <span >[ 目前等級: {this.state.Level} ]</span>
+                <span><img src={DrScratchLogo} className="logo" alt="Dr Scratch Logo" /></span>
+                <span onClick={this.handleClick}>[ 評量 ]</span>
+                <span >[ 等級: {this.state.Level} ]</span>
                 <span> [ 分數: {this.state.TotalScore} ]
                     <IconButton aria-label="cart">
                         <StyledBadge badgeContent={this.state.Abstraction} color="secondary">
