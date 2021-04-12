@@ -130,32 +130,16 @@ class DrScratchScore extends React.Component {
     render() {
         return (
             <div>
-                <Button onClick={this.handleClick}>即時診斷</Button>
-                <span >[ 等級: {this.state.Level} ]</span>
-                <span> [ 分數: {this.state.TotalScore} ]
-                    <IconButton aria-label="cart">
-                        <StyledBadge badgeContent={this.state.Abstraction} color="secondary">
-                            <ShoppingCartIcon />
-                        </StyledBadge>
-                        <StyledBadge badgeContent={this.state.Parallelization} color="secondary">
-                            <AssistantPhotoSharp />
-                        </StyledBadge>
-                        <StyledBadge badgeContent={this.state.Logic} color="secondary">
-                            <ShoppingCartIcon />
-                        </StyledBadge>
-                        <StyledBadge badgeContent={this.state.Synchronization} color="secondary">
-                            <ShoppingCartIcon />
-                        </StyledBadge>
-                        <StyledBadge badgeContent={this.state.FlowControl} color="secondary">
-                            <ShoppingCartIcon />
-                        </StyledBadge>
-                        <StyledBadge badgeContent={this.state.UserInteractivity} color="secondary">
-                            <ShoppingCartIcon />
-                        </StyledBadge>
-                        <StyledBadge badgeContent={this.state.DataRepresentation} color="secondary">
-                            <ShoppingCartIcon />
-                        </StyledBadge>
-                    </IconButton>
+                <Button onClick={this.handleClick}>即時診斷</Button> |
+                <span>等級: {this.state.Level} |
+                總分: {this.state.TotalScore} |
+                抽象化: {this.state.Abstraction} |
+                平行化: {this.state.Parallelization} |
+                邏輯化: {this.state.Logic} |
+                同步化: {this.state.Synchronization} |
+                流程化: {this.state.FlowControl} |
+                人性化: {this.state.UserInteractivity} | 
+                資料化: {this.state.DataRepresentation}
                 </span>
             </div>
         );
