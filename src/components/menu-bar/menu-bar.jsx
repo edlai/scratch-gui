@@ -74,7 +74,7 @@ import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
 
 import scratchLogo from './scratch-logo.svg';
-import drScratchLogo from '../dr-scratch/drscratch_logo.png';
+import drScratchLogo from '../dr-scratch/drscratch-logo.svg';
 
 import sharedMessages from '../../lib/shared-messages';
 
@@ -704,6 +704,17 @@ class MenuBar extends React.Component {
                     ) : (
                         // ******** no login session is available, so don't show login stuff
                         <React.Fragment>
+                        <div className={classNames(styles.menuBarItem)}>
+                            <img
+                                alt="Scratch"
+                                className={classNames(styles.scratchLogo, {
+                                    [styles.clickable]: typeof this.props.onClickLogoDrScratch !== 'undefined'
+                                })}
+                                draggable={false}
+                                src={drScratchLogo}
+                                onClick={this.props.onClickLogoDrScratch}
+                            />
+                        </div>
                             <div key="drScratch" className={classNames(
                                 styles.menuBarItem,
                                 styles.hoverable
@@ -809,6 +820,7 @@ MenuBar.propTypes = {
     onClickLanguage: PropTypes.func,
     onClickLogin: PropTypes.func,
     onClickLogo: PropTypes.func,
+    onClickLogoDrScratch: PropTypes.func,
     onClickNew: PropTypes.func,
     onClickRemix: PropTypes.func,
     onClickSave: PropTypes.func,

@@ -100,6 +100,7 @@ const GUIComponent = props => {
         onActivateSoundsTab,
         onActivateTab,
         onClickLogo,
+        onClickLogoDrScratch,
         onExtensionButtonClick,
         onProjectTelemetryEvent,
         onRequestCloseBackdropLibrary,
@@ -228,6 +229,7 @@ const GUIComponent = props => {
                     onClickAbout={onClickAbout}
                     onClickAccountNav={onClickAccountNav}
                     onClickLogo={onClickLogo}
+                    onClickLogoDrScratch={onClickLogoDrScratch}
                     onCloseAccountNav={onCloseAccountNav}
                     onLogOut={onLogOut}
                     onOpenRegistration={onOpenRegistration}
@@ -400,6 +402,7 @@ GUIComponent.propTypes = {
     onActivateTab: PropTypes.func,
     onClickAccountNav: PropTypes.func,
     onClickLogo: PropTypes.func,
+    onClickLogoDrScratch: PropTypes.func,
     onCloseAccountNav: PropTypes.func,
     onExtensionButtonClick: PropTypes.func,
     onLogOut: PropTypes.func,

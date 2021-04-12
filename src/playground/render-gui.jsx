@@ -11,6 +11,10 @@ const onClickLogo = () => {
     window.location = 'https://scratch.mit.edu';
 };
 
+const onClickLogoDrScratch = () => {
+    window.location = 'http://www.drscratch.org/';
+};
+
 const handleTelemetryModalCancel = () => {
     log('User canceled telemetry modal');
 };
@@ -80,6 +84,7 @@ export default appTarget => {
                 backpackHost={backpackHost}
                 canSave={false}
                 onClickLogo={onClickLogo}
+                onClickLogoDrScratch={onClickLogoDrScratch}
             />,
         appTarget);
 };
