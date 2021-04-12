@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import VM from 'scratch-vm';
 import Box from '../components/box/box.jsx';
-import logo from "../components/dr-scratch/dr-scratch.css";
 
 import {projectTitleInitialState} from '../reducers/project-title';
 import downloadBlob from '../lib/download-blob';
@@ -14,6 +13,7 @@ import axios from 'axios';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Badge from '@material-ui/core/Badge';
+import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
@@ -130,7 +130,7 @@ class DrScratchScore extends React.Component {
     render() {
         return (
             <div>
-                <span onClick={this.handleClick}>[ 評量 ]</span>
+                <Button onClick={this.handleClick}>即時診斷</Button>
                 <span >[ 等級: {this.state.Level} ]</span>
                 <span> [ 分數: {this.state.TotalScore} ]
                     <IconButton aria-label="cart">
