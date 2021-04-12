@@ -131,14 +131,14 @@ class DrScratchScore extends React.Component {
         return (
             <div>
                 <Button onClick={this.handleClick}>即時診斷</Button> |
-                <span>等級: {this.state.Level} |
-                運算思維總分: {this.state.TotalScore}/21 |
-                抽象化: {this.state.Abstraction} |
-                平行化: {this.state.Parallelization} |
-                邏輯化: {this.state.Logic} |
-                同步化: {this.state.Synchronization} |
-                流程化: {this.state.FlowControl} |
-                人性化: {this.state.UserInteractivity} | 
+                <span>等級: {this.state.Level} &nbsp;|&nbsp;
+                運算思維得分: {this.state.TotalScore}/21 &nbsp;|&nbsp;
+                抽象化: {this.state.Abstraction} &nbsp;|&nbsp;
+                平行化: {this.state.Parallelization} &nbsp;|&nbsp;
+                邏輯化: {this.state.Logic} &nbsp;|&nbsp;
+                同步化: {this.state.Synchronization} &nbsp;|&nbsp;
+                流程化: {this.state.FlowControl} &nbsp;|&nbsp;
+                人性化: {this.state.UserInteractivity} &nbsp;|&nbsp;
                 資料化: {this.state.DataRepresentation}
                 </span>
             </div>

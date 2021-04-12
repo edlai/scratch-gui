@@ -532,7 +532,6 @@ class MenuBar extends React.Component {
                         </div>
                     </div>
                     <Divider className={classNames(styles.divider)} />
-
                         <React.Fragment>
                         <div className={classNames(styles.menuBarItem)}>
                             <img
@@ -545,10 +544,7 @@ class MenuBar extends React.Component {
                                 onClick={this.props.onClickLogoDrScratch}
                             />
                         </div>
-                            <div key="drScratch" className={classNames(
-                                styles.menuBarItem,
-                                styles.hoverable
-                            )}>
+                            <div key="drScratch">
                                 <DrScratchScore />
                             </div>
                         </React.Fragment>
