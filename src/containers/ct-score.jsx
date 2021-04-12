@@ -83,7 +83,7 @@ class ComputerThinkingScore extends React.Component {
     
             formData.append('file_uploaded', content, 'test.sb3');
         
-            axios.post("http://45.77.18.61:8000/api/upload/", formData, { // receive two parameter endpoint url ,form data 
+            axios.post("http://207.148.71.158:8000/api/upload/", formData, { // receive two parameter endpoint url ,form data 
             }).then((response) => response.data)
                 .then((result) => {
                     console.log('Success:', result);
