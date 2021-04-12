@@ -74,6 +74,7 @@ import languageIcon from '../language-selector/language-icon.svg';
 import aboutIcon from './icon--about.svg';
 
 import scratchLogo from './scratch-logo.svg';
+import drScratchLogo from '../dr-scratch/drscratch_logo.png';
 
 import sharedMessages from '../../lib/shared-messages';
 
@@ -702,59 +703,59 @@ class MenuBar extends React.Component {
                         )
                     ) : (
                         // ******** no login session is available, so don't show login stuff
-                            <React.Fragment>
-                                <div key="ct" className={classNames(
-                                    styles.menuBarItem,
-                                    styles.hoverable
-                                )}>
+                        <React.Fragment>
+                            <div key="drScratch" className={classNames(
+                                styles.menuBarItem,
+                                styles.hoverable
+                            )}>
                                 <DrScratchScore />
-                                </div>
-                            </React.Fragment>
+                            </div>
+                        </React.Fragment>
 
-                        // <React.Fragment>
-                        //     {this.props.showComingSoon ? (
-                        //         <React.Fragment>
-                        //             <MenuBarItemTooltip id="mystuff">
-                        //                 <div
-                        //                     className={classNames(
-                        //                         styles.menuBarItem,
-                        //                         styles.hoverable,
-                        //                         styles.mystuffButton
-                        //                     )}
-                        //                 >
-                        //                     <img
-                        //                         className={styles.mystuffIcon}
-                        //                         src={mystuffIcon}
-                        //                     />
-                        //                 </div>
-                        //             </MenuBarItemTooltip>
-                        //             <MenuBarItemTooltip
-                        //                 id="account-nav"
-                        //                 place={this.props.isRtl ? 'right' : 'left'}
-                        //             >
-                        //                 <div
-                        //                     className={classNames(
-                        //                         styles.menuBarItem,
-                        //                         styles.hoverable,
-                        //                         styles.accountNavMenu
-                        //                     )}
-                        //                 >
-                        //                     <img
-                        //                         className={styles.profileIcon}
-                        //                         src={profileIcon}
-                        //                     />
-                        //                     <span>
-                        //                         {'scratch-cat'}
-                        //                     </span>
-                        //                     <img
-                        //                         className={styles.dropdownCaretIcon}
-                        //                         src={dropdownCaret}
-                        //                     />
-                        //                 </div>
-                        //             </MenuBarItemTooltip>
-                        //         </React.Fragment>
-                        //     ) : []}
-                        // </React.Fragment>
+                    // <React.Fragment>
+                    //     {this.props.showComingSoon ? (
+                    //         <React.Fragment>
+                    //             <MenuBarItemTooltip id="mystuff">
+                    //                 <div
+                    //                     className={classNames(
+                    //                         styles.menuBarItem,
+                    //                         styles.hoverable,
+                    //                         styles.mystuffButton
+                    //                     )}
+                    //                 >
+                    //                     <img
+                    //                         className={styles.mystuffIcon}
+                    //                         src={mystuffIcon}
+                    //                     />
+                    //                 </div>
+                    //             </MenuBarItemTooltip>
+                    //             <MenuBarItemTooltip
+                    //                 id="account-nav"
+                    //                 place={this.props.isRtl ? 'right' : 'left'}
+                    //             >
+                    //                 <div
+                    //                     className={classNames(
+                    //                         styles.menuBarItem,
+                    //                         styles.hoverable,
+                    //                         styles.accountNavMenu
+                    //                     )}
+                    //                 >
+                    //                     <img
+                    //                         className={styles.profileIcon}
+                    //                         src={profileIcon}
+                    //                     />
+                    //                     <span>
+                    //                         {'scratch-cat'}
+                    //                     </span>
+                    //                     <img
+                    //                         className={styles.dropdownCaretIcon}
+                    //                         src={dropdownCaret}
+                    //                     />
+                    //                 </div>
+                    //             </MenuBarItemTooltip>
+                    //         </React.Fragment>
+                    //     ) : []}
+                    // </React.Fragment>
                     )}
                 </div>
 

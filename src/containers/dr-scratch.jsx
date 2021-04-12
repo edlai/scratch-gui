@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import VM from 'scratch-vm';
 import Box from '../components/box/box.jsx';
-import DrScratchLogo from '../components/dr-scratch/drscratch_logo.png';
 import logo from "../components/dr-scratch/dr-scratch.css";
 
 import {projectTitleInitialState} from '../reducers/project-title';
@@ -131,7 +130,6 @@ class DrScratchScore extends React.Component {
     render() {
         return (
             <div>
-                <span><img src={DrScratchLogo} className="logo" alt="Dr Scratch Logo" /></span>
                 <span onClick={this.handleClick}>[ 評量 ]</span>
                 <span >[ 等級: {this.state.Level} ]</span>
                 <span> [ 分數: {this.state.TotalScore} ]
