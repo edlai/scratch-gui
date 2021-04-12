@@ -42,7 +42,9 @@ class ComputerThinkingScore extends React.Component {
             Synchronization: 0,
             FlowControl: 0,
             UserInteractivity: 0,
-            DataRepresentation: 0};
+            DataRepresentation: 0,
+	    TotalScore: 0,
+	    Level: ''};
     }
 
     handleClick () {
@@ -79,14 +81,34 @@ class ComputerThinkingScore extends React.Component {
             // );
             console.log(content);
 
+	    let post_uri = "http://" + window.location.hostname + ":8000/api/upload/"
+	
+            console.log ("post uri:" + post_uri);
+	
             const formData = new FormData();
     
             formData.append('file_uploaded', content, 'test.sb3');
-        
-            axios.post("http://207.148.71.158:8000/api/upload/", formData, { // receive two parameter endpoint url ,form data 
+            
+	    axios.post(post_uri, formData, { // receive two parameter endpoint url ,form data 
             }).then((response) => response.data)
                 .then((result) => {
                     console.log('Success:', result);
+		    let TotalScore = JSON.parse(result).Abstraction +
+				      JSON.parse(result).Parallelization +
+				      JSON.parse(result).Logic +
+				      JSON.parse(result).Synchronization +
+				      JSON.parse(result).FlowControl +
+				      JSON.parse(result).UserInteractivity +
+				      JSON.parse(result).DataRepresentation
+		    let avg_score = Math.round(TotalScore/3)
+		    let Level = ''
+		    if (avg_score >= 0 && avg_score <= 7) {
+			Level = '初學者'
+		    } else if (avg_score >7 && abg_score <= 14) {
+			Level = '開發者'
+		    } else if (avg_score >14 && abg_score <= 21) {
+			Level = '專家'
+                    }
                     this.setState({
                         Abstraction: JSON.parse(result).Abstraction,
                         Parallelization: JSON.parse(result).Parallelization, 
@@ -94,7 +116,9 @@ class ComputerThinkingScore extends React.Component {
                         Synchronization: JSON.parse(result).Synchronization, 
                         FlowControl: JSON.parse(result).FlowControl, 
                         UserInteractivity: JSON.parse(result).UserInteractivity, 
-                        DataRepresentation: JSON.parse(result).DataRepresentation
+                        DataRepresentation: JSON.parse(result).DataRepresentation,
+			TotalScore: TotalScore,
+			Level: Level
                       });
                 }).catch((error) => {
                     console.error('Error:', error);
@@ -106,15 +130,9 @@ class ComputerThinkingScore extends React.Component {
     render() {
         return (
             <div>
-                <span onClick={this.handleClick}>[ 評量 ]</span>
-                <span >[ 等級: 專家 ]</span>
-                <span> [ 分數: {this.state.Abstraction +
-                    this.state.Parallelization +
-                    this.state.Logic +
-                    this.state.Synchronization +
-                    this.state.FlowControl +
-                    this.state.UserInteractivity +
-                    this.state.DataRepresentation} / 21 ]
+                <span onClick={this.handleClick}>[ 評量開始 ]</span>
+                <span >[ 目前等級: {this.state.Level} ]</span>
+                <span> [ 分數: {this.state.TotalScore} ]
                     <IconButton aria-label="cart">
                         <StyledBadge badgeContent={this.state.Abstraction} color="secondary">
                             <ShoppingCartIcon />
