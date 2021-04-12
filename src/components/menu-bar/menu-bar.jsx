@@ -77,7 +77,7 @@ import scratchLogo from './scratch-logo.svg';
 
 import sharedMessages from '../../lib/shared-messages';
 
-import ComputerThinkingScore from '../../containers/ct-score.jsx'; 
+import DrScratchScore from '../../containers/dr-scratch.jsx';
 
 const ariaMessages = defineMessages({
     language: {
@@ -707,7 +707,7 @@ class MenuBar extends React.Component {
                                     styles.menuBarItem,
                                     styles.hoverable
                                 )}>
-                                <ComputerThinkingScore />
+                                <DrScratchScore />
                                 </div>
                             </React.Fragment>
 

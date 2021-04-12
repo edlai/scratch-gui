@@ -29,7 +29,7 @@ const StyledBadge = withStyles((theme) => ({
   },
 }))(Badge);
 
-class ComputerThinkingScore extends React.Component {
+class DrScratchScore extends React.Component {
     constructor (props) {
         super(props);
         bindAll(this, [
@@ -171,7 +171,7 @@ const getProjectFilename = (curTitle, defaultTitle) => {
     return `${filenameTitle.substring(0, 100)}.sb3`;
 };
 
-ComputerThinkingScore.propTypes = {
+DrScratchScore.propTypes = {
     className: PropTypes.string,
     vm: PropTypes.instanceOf(VM),
     wrapperClass: PropTypes.string,
@@ -191,4 +191,4 @@ const mapDispatchToProps = () => ({});
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(ComputerThinkingScore);
+)(DrScratchScore);
