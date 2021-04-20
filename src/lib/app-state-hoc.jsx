@@ -7,6 +7,7 @@ import ConnectedIntlProvider from './connected-intl-provider.jsx';
 import localesReducer, {initLocale, localesInitialState} from '../reducers/locales';
 
 import {setPlayer, setFullScreen} from '../reducers/mode.js';
+import {setDrScratch} from '../reducers/drscratch.js';
 
 import locales from 'scratch-l10n';
 import {detectLocale} from './detect-locale';

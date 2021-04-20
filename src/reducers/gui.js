@@ -12,6 +12,7 @@ import menuReducer, {menuInitialState} from './menus';
 import micIndicatorReducer, {micIndicatorInitialState} from './mic-indicator';
 import modalReducer, {modalsInitialState} from './modals';
 import modeReducer, {modeInitialState} from './mode';
+import drScratchReducer, {drScratchInitialState} from './drscratch';
 import monitorReducer, {monitorsInitialState} from './monitors';
 import monitorLayoutReducer, {monitorLayoutInitialState} from './monitor-layout';
 import projectChangedReducer, {projectChangedInitialState} from './project-changed';
@@ -42,6 +43,7 @@ const guiInitialState = {
     customProcedures: customProceduresInitialState,
     editorTab: editorTabInitialState,
     mode: modeInitialState,
+    drscratch: drScratchInitialState,
     hoveredTarget: hoveredTargetInitialState,
     stageSize: stageSizeInitialState,
     menus: menuInitialState,
@@ -141,6 +143,7 @@ const guiReducer = combineReducers({
     customProcedures: customProceduresReducer,
     editorTab: editorTabReducer,
     mode: modeReducer,
+    drscratch: drScratchReducer,
     hoveredTarget: hoveredTargetReducer,
     stageSize: stageSizeReducer,
     menus: menuReducer,

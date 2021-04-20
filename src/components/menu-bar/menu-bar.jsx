@@ -75,7 +75,8 @@ import aboutIcon from './icon--about.svg';
 
 import scratchLogo from './scratch-logo.svg';
 import sharedMessages from '../../lib/shared-messages';
-import DrScratchScore from '../../containers/dr-scratch.jsx';
+import DrScratch from '../../containers/drscratch.jsx';
+import DrScratchScore from '../../containers/drscratch-score.jsx';
 import drScratchLogo from '../dr-scratch/drscratch-logo.svg';
 
 const ariaMessages = defineMessages({
@@ -545,6 +546,7 @@ class MenuBar extends React.Component {
                             />
                         </div>
                             <div key="drScratch">
+                                <DrScratch />
                                 <DrScratchScore />
                             </div>
                         </React.Fragment>
