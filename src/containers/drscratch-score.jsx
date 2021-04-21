@@ -11,10 +11,8 @@ import downloadBlob from '../lib/download-blob';
 
 import axios from 'axios';
 
-import { makeStyles } from '@material-ui/core/styles';
 import Badge from '@material-ui/core/Badge';
 import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/Wifi';
@@ -26,6 +24,24 @@ import Paper from '@material-ui/core/Paper';
 
 import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
+
+import { makeStyles, withStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+
+
+const theme = createMuiTheme({
+  typography: {
+    subtitle1: {
+      fontSize: 12,
+    },
+    body1: {
+      fontWeight: 500,
+    },
+    button: {
+      fontStyle: 'italic',
+    },
+  },
+});
 
 const styles = {
     root: {
@@ -53,8 +69,10 @@ class DrScratchScore extends React.Component {
     render() {
         return (
             <React.Fragment>
-            <Rating max="3" name="size-small" defaultValue={0}  size="small" />
-
+            <Rating size="small" name="read-only" value={this.props.drscratch.TotalScore} readOnly max={21} />
+            <Typography>
+            <Button container className={styles.root} spacing={10}> {this.props.drscratch.TotalScore}/21 </Button>
+            </Typography>
             </React.Fragment>
         );
     }

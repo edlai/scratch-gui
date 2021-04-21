@@ -534,19 +534,15 @@ class MenuBar extends React.Component {
                     </div>
                     <Divider className={classNames(styles.divider)} />
                         <React.Fragment>
-                        <div className={classNames(styles.menuBarItem)}>
                             <img
-                                alt="Scratch"
-                                className={classNames(styles.scratchLogo, {
-                                    [styles.clickable]: typeof this.props.onClickLogoDrScratch !== 'undefined'
-                                })}
+                                alt="Dr.Scratch"
                                 draggable={false}
                                 src={drScratchLogo}
                                 onClick={this.props.onClickLogoDrScratch}
-                            />
-
+                                style={{ width: "10%"}} />
+                                &nbsp;&nbsp;
                                 <DrScratchScore />
-                            </div>
+
                         </React.Fragment>
                 </div>
 

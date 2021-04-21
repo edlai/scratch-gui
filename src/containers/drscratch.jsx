@@ -11,10 +11,8 @@ import downloadBlob from '../lib/download-blob';
 
 import axios from 'axios';
 
-import { makeStyles } from '@material-ui/core/styles';
 import Badge from '@material-ui/core/Badge';
 import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
 import ShoppingCartIcon from '@material-ui/icons/Wifi';
@@ -24,6 +22,23 @@ import {drScratchInitialState, setDrScratch} from '../reducers/drscratch';
 import Tooltip from '@material-ui/core/Tooltip';
 import styles from '../components/dr-scratch/dr-scratch.css';
 import drScratcIcon from '../components/dr-scratch/drscratch-icon.svg';
+import Typography from '@material-ui/core/Typography';
+
+import { makeStyles, withStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  typography: {
+    subtitle1: {
+      fontSize: 12,
+    },
+    body1: {
+      fontWeight: 500,
+    },
+    button: {
+      fontStyle: 'italic',
+    },
+  },
+});
 
 class DrScratch extends React.Component {
         constructor (props) {
@@ -93,7 +108,8 @@ class DrScratch extends React.Component {
                 <div>
                 <Tooltip title="選此透過 Dr.Scratch 進行專案即時評量" aria-label="add">
                 <Button uppercase={false} type="button" onClick={this.handleClick}>
-                <img src={drScratcIcon} style={{ width: "10%"}} /> &nbsp; Dr.Scratch &nbsp; 即時評量
+                <img src={drScratcIcon} style={{ width: "10%"}} /> 
+                <Typography>&nbsp; Dr.Scratch &nbsp; 即時評量</Typography>
                 </Button>
                 </Tooltip>
                 </div>
