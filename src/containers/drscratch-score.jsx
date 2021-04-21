@@ -22,6 +22,20 @@ import AssistantPhotoSharp from '@material-ui/icons/AssistantPhotoSharp';
 
 import {drScratchInitialState, setDrScratch} from '../reducers/drscratch';
 import drscratch from './drscratch.jsx';
+import Paper from '@material-ui/core/Paper';
+
+import Rating from '@material-ui/lab/Rating';
+import Typography from '@material-ui/core/Typography';
+
+const styles = {
+    root: {
+        flexGrow: 1,
+      },
+      paper: {
+        height: 140,
+        width: 100,
+      }
+  };
 
 class DrScratchScore extends React.Component {
     constructor (props) {
@@ -38,17 +52,10 @@ class DrScratchScore extends React.Component {
 
     render() {
         return (
-            <span>
-            分數: {this.props.drscratch.TotalScore}/21 &nbsp;|&nbsp;
-            等級: {this.props.drscratch.Level}         &nbsp;|&nbsp;
-            抽象化: {this.props.drscratch.Abstraction} &nbsp;|&nbsp; 
-            平行化: {this.props.drscratch.Parallelization}  &nbsp;|&nbsp; 
-            邏輯化: {this.props.drscratch.Logic}  &nbsp;|&nbsp;
-            同步化: {this.props.drscratch.Synchronization}  &nbsp;|&nbsp;
-            流程化: {this.props.drscratch.FlowControl}  &nbsp;|&nbsp;
-            人性化: {this.props.drscratch.UserInteractivity}  &nbsp;|&nbsp;
-            資料化: {this.props.drscratch.DataRepresentation}
-            </span>
+            <React.Fragment>
+            <Rating max="3" name="size-small" defaultValue={0}  size="small" />
+
+            </React.Fragment>
         );
     }
 }
@@ -89,3 +96,14 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(DrScratchScore);
+
+
+{/* <Button container className={styles.root} spacing={10}>分數: {this.props.drscratch.TotalScore}/21 </Button>
+<Button>等級: {this.props.drscratch.Level}   </Button>      
+<Paper>抽象化: {this.props.drscratch.Abstraction}</Paper>
+<Paper>平行化: {this.props.drscratch.Parallelization}  </Paper>
+<Paper>邏輯化: {this.props.drscratch.Logic}  </Paper>
+<Paper>同步化: {this.props.drscratch.Synchronization}  </Paper>
+<Paper>流程化: {this.props.drscratch.FlowControl}  </Paper>
+<Paper>人性化: {this.props.drscratch.UserInteractivity}  </Paper>
+<Paper>資料化: {this.props.drscratch.DataRepresentation}</Paper> */}

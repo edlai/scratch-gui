@@ -7,6 +7,8 @@ import GreenFlag from '../green-flag/green-flag.jsx';
 import StopAll from '../stop-all/stop-all.jsx';
 import TurboMode from '../turbo-mode/turbo-mode.jsx';
 
+import DrScratch from '../../containers/drscratch.jsx';
+
 import styles from './controls.css';
 
 const messages = defineMessages({
@@ -50,6 +52,7 @@ const Controls = function (props) {
             {turbo ? (
                 <TurboMode />
             ) : null}
+            <DrScratch />
         </div>
     );
 };

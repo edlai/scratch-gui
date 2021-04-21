@@ -544,9 +544,7 @@ class MenuBar extends React.Component {
                                 src={drScratchLogo}
                                 onClick={this.props.onClickLogoDrScratch}
                             />
-                        </div>
-                            <div key="drScratch">
-                                <DrScratch />
+
                                 <DrScratchScore />
                             </div>
                         </React.Fragment>

@@ -21,6 +21,9 @@ import ShoppingCartIcon from '@material-ui/icons/Wifi';
 import AssistantPhotoSharp from '@material-ui/icons/AssistantPhotoSharp';
 import {drScratchInitialState, setDrScratch} from '../reducers/drscratch';
 
+import Tooltip from '@material-ui/core/Tooltip';
+import styles from '../components/dr-scratch/dr-scratch.css';
+import drScratcIcon from '../components/dr-scratch/drscratch-icon.svg';
 
 class DrScratch extends React.Component {
         constructor (props) {
@@ -87,10 +90,17 @@ class DrScratch extends React.Component {
 
         render() {
             return (
-              <Button onClick={this.handleClick}>即時診斷</Button>
+                <div>
+                <Tooltip title="選此透過 Dr.Scratch 進行專案即時評量" aria-label="add">
+                <Button uppercase={false} type="button" onClick={this.handleClick}>
+                <img src={drScratcIcon} style={{ width: "10%"}} /> &nbsp; Dr.Scratch &nbsp; 即時評量
+                </Button>
+                </Tooltip>
+                </div>
             );
         }
 }
+
 
 const getProjectFilename = (curTitle, defaultTitle) => {
     let filenameTitle = curTitle;
