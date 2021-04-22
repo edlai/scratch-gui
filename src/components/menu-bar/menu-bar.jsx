@@ -539,7 +539,7 @@ class MenuBar extends React.Component {
                                 draggable={false}
                                 src={drScratchLogo}
                                 onClick={this.props.onClickLogoDrScratch}
-                                style={{ width: "10%"}} />
+                                style={{ width: "11%"}} />
                                 &nbsp;&nbsp;
                                 <DrScratchScore />
 
