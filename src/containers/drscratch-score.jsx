@@ -26,8 +26,12 @@ import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
 
 import { makeStyles, withStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
 
-
+import Bulbasaur from '../components/dr-scratch/300px-001Bulbasaur.png';
+import Ivysaur from '../components/dr-scratch/300px-002Ivysaur.png';
+import Venusaur from '../components/dr-scratch/300px-003Venusaur.png';
+import VenusaurMegaDream from '../components/dr-scratch/300px-003Venusaur-Mega_Dream.png';
 
 const theme = createMuiTheme({
   typography: {
@@ -67,12 +71,32 @@ class DrScratchScore extends React.Component {
     }
 
     render() {
+        let level;
+        if (this.props.drscratch.TotalScore >=21)
+            level = <Tooltip title="超級妙娃花"><img src={VenusaurMegaDream} style={{ width: "4%"}}/></Tooltip>;
+        else if (this.props.drscratch.TotalScore >= 14 && this.props.drscratch.TotalScore < 20)
+            level = <Tooltip title="妙蛙花"><img src={Ivysaur} style={{ width: "4%"}}/></Tooltip>;
+        else if (this.props.drscratch.TotalScore >= 7 && this.props.drscratch.TotalScore < 13)
+            level = <Tooltip title="妙蛙草"><img src={Venusaur} style={{ width: "4%"}}/></Tooltip>;
+        else
+            level = <Tooltip title="妙蛙種子"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
+
         return (
             <React.Fragment>
             <Rating size="small" name="read-only" value={this.props.drscratch.TotalScore} readOnly max={21} />
             <Typography>
             <Button container className={styles.root} spacing={10}> {this.props.drscratch.TotalScore}/21 </Button>
             </Typography>
+
+            抽象: {this.props.drscratch.Abstraction}
+            平行: {this.props.drscratch.Parallelization}
+            邏輯: {this.props.drscratch.Logic}
+            同步: {this.props.drscratch.Synchronization}
+            流程: {this.props.drscratch.FlowControl} 
+            人性: {this.props.drscratch.UserInteractivity} 
+            資料: {this.props.drscratch.DataRepresentation}
+            {level}
+
             </React.Fragment>
         );
     }

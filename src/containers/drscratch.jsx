@@ -109,7 +109,7 @@ class DrScratch extends React.Component {
                 <Tooltip title="選此透過 Dr.Scratch 進行專案即時評量" aria-label="add">
                 <Button uppercase={false} type="button" onClick={this.handleClick}>
                 <img src={drScratcIcon} style={{ width: "10%"}} /> 
-                <Typography>&nbsp; Dr.Scratch &nbsp; 即時評量</Typography>
+                <Typography>&nbsp; Dr.Scratch &nbsp; </Typography>
                 </Button>
                 </Tooltip>
                 </div>
