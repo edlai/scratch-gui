@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 import {connect} from 'react-redux';
 import VM from 'scratch-vm';
-import Box from '../components/box/box.jsx';
+
+import Box from '@material-ui/core/Box';
 
 import {projectTitleInitialState} from '../reducers/project-title';
 import downloadBlob from '../lib/download-blob';
@@ -24,6 +25,8 @@ import Paper from '@material-ui/core/Paper';
 
 import Rating from '@material-ui/lab/Rating';
 import Typography from '@material-ui/core/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgressWithLabel from './drscratch-process.jsx';
 
 import { makeStyles, withStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
