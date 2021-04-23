@@ -86,19 +86,22 @@ class DrScratchScore extends React.Component {
 
         return (
             <React.Fragment>
-            <Rating size="small" name="read-only" value={this.props.drscratch.TotalScore} readOnly max={21} />
-            <Typography>
-            <Button container className={styles.root} spacing={10}> {this.props.drscratch.TotalScore}/21 </Button>
-            </Typography>
+                <Rating size="small" name="read-only" value={this.props.drscratch.TotalScore} readOnly max={21} />
+                <Typography>
+                    <Button container className={styles.root} spacing={10}> {this.props.drscratch.TotalScore}/21 </Button>
+                </Typography>
+                {level}
+                <Typography component="div" variant="body1">
+                    <Box component="span" m={1} boxShadow={3} color="warning.main">抽象: {this.props.drscratch.Abstraction}</Box>
+                    <Box component="span" m={1} boxShadow={3} color="warning.main">平行: {this.props.drscratch.Parallelization}</Box>
+                    <Box component="span" m={1} boxShadow={3} color="warning.main">邏輯: {this.props.drscratch.Logic}</Box>
+                    <Box component="span" m={1} boxShadow={3} color="warning.main">同步: {this.props.drscratch.Synchronization}</Box>
+                    <Box component="span" m={1} boxShadow={3} color="warning.main">流程: {this.props.drscratch.FlowControl} </Box>
+                    <Box component="span" m={1} boxShadow={3} color="warning.main">人性: {this.props.drscratch.UserInteractivity}</Box>
+                    <Box component="span" m={1} boxShadow={3} color="warning.main">資料: {this.props.drscratch.DataRepresentation}</Box>
 
-            抽象: {this.props.drscratch.Abstraction}
-            平行: {this.props.drscratch.Parallelization}
-            邏輯: {this.props.drscratch.Logic}
-            同步: {this.props.drscratch.Synchronization}
-            流程: {this.props.drscratch.FlowControl} 
-            人性: {this.props.drscratch.UserInteractivity} 
-            資料: {this.props.drscratch.DataRepresentation}
-            {level}
+                </Typography>
+
 
             </React.Fragment>
         );
