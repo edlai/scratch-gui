@@ -12,7 +12,7 @@ const onClickLogo = () => {
 };
 
 const onClickLogoDrScratch = () => {
-    window.location = 'http://www.drscratch.org/';
+    window.location = "http://" + window.location.hostname + ":8000"
 };
 
 const handleTelemetryModalCancel = () => {

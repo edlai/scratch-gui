@@ -39,7 +39,7 @@ const Controls = function (props) {
             className={classNames(styles.controlsContainer, className)}
             {...componentProps}
         >
-            <DrScratch />
+
             <GreenFlag
                 active={active}
                 title={intl.formatMessage(messages.goTitle)}
@@ -53,6 +53,7 @@ const Controls = function (props) {
             {turbo ? (
                 <TurboMode />
             ) : null}
+            <DrScratch />
 
         </div>
     );
