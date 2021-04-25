@@ -35,6 +35,7 @@ import Bulbasaur from '../components/dr-scratch/300px-001Bulbasaur.png';
 import Ivysaur from '../components/dr-scratch/300px-002Ivysaur.png';
 import Venusaur from '../components/dr-scratch/300px-003Venusaur.png';
 import VenusaurMegaDream from '../components/dr-scratch/300px-003Venusaur-Mega_Dream.png';
+import drScratcIcon from '../components/dr-scratch/drscratch-icon.svg';
 
 const theme = createMuiTheme({
   typography: {
@@ -83,6 +84,8 @@ class DrScratchScore extends React.Component {
             level = <Tooltip title="妙蛙草"><img src={Venusaur} style={{ width: "4%"}}/></Tooltip>;
         else
             level = <Tooltip title="妙蛙種子"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
+        
+        let drscratch_icon = <img src={drScratcIcon} style={{ width: "3%"}} />;
 
         return (
             <React.Fragment>
@@ -92,13 +95,13 @@ class DrScratchScore extends React.Component {
                 </Typography>
 
                 <Typography component="div" variant="body1">
-                    <Box component="span" m={1} boxShadow={3} color="text.primary">抽象: {this.props.drscratch.Abstraction}</Box>
-                    <Box component="span" m={1} boxShadow={3} color="text.primary">平行: {this.props.drscratch.Parallelization}</Box>
-                    <Box component="span" m={1} boxShadow={3} color="text.primary">邏輯: {this.props.drscratch.Logic}</Box>
-                    <Box component="span" m={1} boxShadow={3} color="text.primary">同步: {this.props.drscratch.Synchronization}</Box>
-                    <Box component="span" m={1} boxShadow={3} color="text.primary">流程: {this.props.drscratch.FlowControl} </Box>
-                    <Box component="span" m={1} boxShadow={3} color="text.primary">人性: {this.props.drscratch.UserInteractivity}</Box>
-                    <Box component="span" m={1} boxShadow={3} color="text.primary">資料: {this.props.drscratch.DataRepresentation}</Box>
+                    <Box component="span" m={1} boxShadow={1} color="text.primary">{drscratch_icon}抽象: {this.props.drscratch.Abstraction}</Box>
+                    <Box component="span" m={1} boxShadow={1} color="text.primary">{drscratch_icon}平行: {this.props.drscratch.Parallelization}</Box>
+                    <Box component="span" m={1} boxShadow={1} color="text.primary">{drscratch_icon}邏輯: {this.props.drscratch.Logic}</Box>
+                    <Box component="span" m={1} boxShadow={1} color="text.primary">{drscratch_icon}同步: {this.props.drscratch.Synchronization}</Box>
+                    <Box component="span" m={1} boxShadow={1} color="text.primary">{drscratch_icon}流程: {this.props.drscratch.FlowControl} </Box>
+                    <Box component="span" m={1} boxShadow={1} color="text.primary">{drscratch_icon}人性: {this.props.drscratch.UserInteractivity}</Box>
+                    <Box component="span" m={1} boxShadow={1} color="text.primary">{drscratch_icon}資料: {this.props.drscratch.DataRepresentation}</Box>
                 </Typography>
                 &nbsp;
                 {level}
