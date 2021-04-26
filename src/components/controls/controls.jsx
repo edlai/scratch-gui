@@ -54,7 +54,6 @@ const Controls = function (props) {
                 <TurboMode />
             ) : null}
             <DrScratch />
-            <a href="https://forms.gle/2meKseCiY92bBdTL9" rel="noreferrer">前測</a>
         </div>
     );
 };
