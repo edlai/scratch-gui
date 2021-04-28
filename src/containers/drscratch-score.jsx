@@ -78,9 +78,9 @@ class DrScratchScore extends React.Component {
         let level;
         if (this.props.drscratch.TotalScore >=21)
             level = <Tooltip title="超級妙娃花"><img src={VenusaurMegaDream} style={{ width: "4%"}}/></Tooltip>;
-        else if (this.props.drscratch.TotalScore >= 14 && this.props.drscratch.TotalScore < 20)
+        else if (this.props.drscratch.TotalScore >= 14 && this.props.drscratch.TotalScore < 21)
             level = <Tooltip title="妙蛙花"><img src={Ivysaur} style={{ width: "4%"}}/></Tooltip>;
-        else if (this.props.drscratch.TotalScore >= 7 && this.props.drscratch.TotalScore < 13)
+        else if (this.props.drscratch.TotalScore >= 7 && this.props.drscratch.TotalScore < 14)
             level = <Tooltip title="妙蛙草"><img src={Venusaur} style={{ width: "4%"}}/></Tooltip>;
         else
             level = <Tooltip title="妙蛙種子"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
