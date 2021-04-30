@@ -85,27 +85,28 @@ class DrScratchScore extends React.Component {
         else
             level = <Tooltip title="妙蛙種子"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
         
+        let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
         return (
             <React.Fragment>
                 <Typography component="div" variant="body1">
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
+                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
                     抽象: <Rating size="small" name="read-only" value={this.props.drscratch.Abstraction} readOnly max={3} /></Box>
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
+                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
                     平行: <Rating size="small" name="read-only" value={this.props.drscratch.Parallelization} readOnly max={3} /></Box>
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
+                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
                     邏輯: <Rating size="small" name="read-only" value={this.props.drscratch.Logic} readOnly max={3} /></Box>
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
+                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
                     同步: <Rating size="small" name="read-only" value={this.props.drscratch.Synchronization} readOnly max={3} /></Box>
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
+                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
                     流程: <Rating size="small" name="read-only" value={this.props.drscratch.FlowControl} readOnly max={3} /></Box>
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
+                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
                     人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box>
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
+                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
                     資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box>
-                    <Box component="span" m={1} color="text.primary">{drscratch_icon}
-                    成績: {this.props.drscratch.TotalScore} / 21</Box>
+                    <Box component="span" m={1} bgcolor="info.main" color="secondary.main">{drscratch_icon}
+                    等級: {this.props.drscratch.TotalScore} / 21</Box>
                 </Typography>
                 &nbsp;
                 {level}
