@@ -129,7 +129,7 @@ class DrScratchScore extends React.Component {
         let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
-        let drscratch_logo = <Tooltip title="按下滑鼠左鍵，打開 Dr.Scratch 網站" arrow><Box component="span" m={1}><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Box></Tooltip>;
+        let drscratch_logo = <Tooltip title="Dr.Scratch可以幫你的作品評分。按下滑鼠左鍵，就可以打開 Dr.Scratch 網站" arrow><Box component="span" m={1}><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Box></Tooltip>;
         
         let curr_url = window.location.hostname;
         let substring = "502";
@@ -152,7 +152,7 @@ class DrScratchScore extends React.Component {
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main">
+                    <Box component="span" m={1}>
                     ✂️ 抽象: <Rating size="small" name="read-only" value={this.props.drscratch.Abstraction} readOnly max={3} /></Box>
                     </HtmlTooltip>
 
@@ -168,7 +168,7 @@ class DrScratchScore extends React.Component {
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main">
+                    <Box component="span" m={1}>
                     🐙 平行: <Rating size="small" name="read-only" value={this.props.drscratch.Parallelization} readOnly max={3} /></Box>
                     </HtmlTooltip>
                     <HtmlTooltip
@@ -183,7 +183,7 @@ class DrScratchScore extends React.Component {
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main">
+                    <Box component="span" m={1}>
                     🐶 邏輯: <Rating size="small" name="read-only" value={this.props.drscratch.Logic} readOnly max={3} /></Box>
                     </HtmlTooltip>
                     <HtmlTooltip
@@ -196,7 +196,7 @@ class DrScratchScore extends React.Component {
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main">
+                    <Box component="span" m={1}>
                     🐢 同步: <Rating size="small" name="read-only" value={this.props.drscratch.Synchronization} readOnly max={3} /></Box>
                     </HtmlTooltip>
                     <HtmlTooltip
@@ -209,20 +209,20 @@ class DrScratchScore extends React.Component {
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main">
+                    <Box component="span" m={1}>
                     🎠 流程: <Rating size="small" name="read-only" value={this.props.drscratch.FlowControl} readOnly max={3} /></Box>
                     </HtmlTooltip>
                     <HtmlTooltip
                         title={
                             <React.Fragment>
-                                <Typography color="inherit">💖 科技始終來自於人性 </Typography>
+                                <Typography color="inherit">💖 人性互動: 科技始終來自於人性 </Typography>
                                 <ol>
                                     <li>讓電腦充滿人性化，讓使用者的操作更加便利!</li>
                                 </ol>
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main">
+                    <Box component="span" m={1}>
                     💖 人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box>
                     </HtmlTooltip>
 
@@ -238,7 +238,7 @@ class DrScratchScore extends React.Component {
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main">
+                    <Box component="span" m={1}>
                     📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box>
                     </HtmlTooltip>
                     <HtmlTooltip
@@ -255,8 +255,9 @@ class DrScratchScore extends React.Component {
                             </React.Fragment>
                         }
                     >
-                    <Box component="span" m={1} bgcolor="info.main" color="secondary.main">{drscratch_icon}
-                    等級: {this.props.drscratch.TotalScore} / 21</Box>
+                    <Box component="span" m={1} color="warning.main">
+                    {drscratch_icon}等級: {this.props.drscratch.TotalScore} / 21 {drscratch_icon}
+                    </Box>
                     </HtmlTooltip>
                 </Typography>
 
