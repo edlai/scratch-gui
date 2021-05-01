@@ -83,18 +83,18 @@ class DrScratchScore extends React.Component {
     render() {
         let level;
         if (this.props.drscratch.TotalScore >=21)
-            level = <Tooltip title="超級妙娃花"><img src={VenusaurMegaDream} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="我是超級妙蛙花。我已經是是超極巨化了!"><img src={VenusaurMegaDream} style={{ width: "4%"}}/></Tooltip>;
         else if (this.props.drscratch.TotalScore >= 14 && this.props.drscratch.TotalScore < 21)
-            level = <Tooltip title="妙蛙花"><img src={Ivysaur} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="我是妙蛙花，等21以上我就會變成超級妙蛙花喔!"><img src={Venusaur} style={{ width: "4%"}}/></Tooltip>;
         else if (this.props.drscratch.TotalScore >= 7 && this.props.drscratch.TotalScore < 14)
-            level = <Tooltip title="妙蛙草"><img src={Venusaur} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="妙蛙草，等14以上我就會變成妙蛙花喔!"><img src={Ivysaur} style={{ width: "4%"}}/></Tooltip>;
         else
-            level = <Tooltip title="妙蛙種子"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="我是妙蛙種子，等級7以上我就會變成妙蛙草喔!"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
         
         let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
-        let drscratch_logo = <Box component="span" m={0}><Tooltip title="跳轉到 Dr.Scratch 網站"><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Tooltip></Box>;
+        let drscratch_logo = <Tooltip title="打開 Dr.Scratch 網站"><Box component="span" m={1}><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Box></Tooltip>;
         
         let curr_url = window.location.hostname;
         let substring = "502";
@@ -105,22 +105,29 @@ class DrScratchScore extends React.Component {
             <React.Fragment>
                 {drscratch_logo}
                 <Typography component="div" variant="body1">
+                    <Tooltip title="用放大鏡將一個問題分解成一個個小問題。我們也可以用函式積木把相同的動作整理在一起。也可以善用分身的功能，把人物同時複製多份。"><Box component="span" m={1} bgcolor="info.main">
+                    🔍 抽象: <Rating size="small" name="read-only" value={this.props.drscratch.Abstraction} readOnly max={3} /></Box></Tooltip>
+                    <Tooltip title="電腦就像章魚一樣有很多手，一次可以同時進行很多件事!">
                     <Box component="span" m={1} bgcolor="info.main">
-                    🔍 抽象: <Rating size="small" name="read-only" value={this.props.drscratch.Abstraction} readOnly max={3} /></Box>
+                    🐙 平行: <Rating size="small" name="read-only" value={this.props.drscratch.Parallelization} readOnly max={3} /></Box></Tooltip>
+                    <Tooltip title="電腦可以像狗狗一樣明辨是非，知道誰是好人，誰是壞人!">
                     <Box component="span" m={1} bgcolor="info.main">
-                    🐙 平行: <Rating size="small" name="read-only" value={this.props.drscratch.Parallelization} readOnly max={3} /></Box>
+                    🐶 邏輯: <Rating size="small" name="read-only" value={this.props.drscratch.Logic} readOnly max={3} /></Box></Tooltip>
+                    <Tooltip title="電腦跑得很快，我們可以讓電腦像烏龜一樣，暫停一下!">
                     <Box component="span" m={1} bgcolor="info.main">
-                    🐶 邏輯: <Rating size="small" name="read-only" value={this.props.drscratch.Logic} readOnly max={3} /></Box>
+                    🐢 同步: <Rating size="small" name="read-only" value={this.props.drscratch.Synchronization} readOnly max={3} /></Box></Tooltip>
+                    <Tooltip title="電腦可以像旋轉木馬一樣，把一個任務進行無限多次，你也可以設定你所需要的進行的次數!">
                     <Box component="span" m={1} bgcolor="info.main">
-                    🐢 同步: <Rating size="small" name="read-only" value={this.props.drscratch.Synchronization} readOnly max={3} /></Box>
+                    🎠 流程: <Rating size="small" name="read-only" value={this.props.drscratch.FlowControl} readOnly max={3} /></Box></Tooltip>
+                    <Tooltip title="讓電腦充滿人性化，讓使用者的操作更加便利!">
                     <Box component="span" m={1} bgcolor="info.main">
-                    🎠 流程: <Rating size="small" name="read-only" value={this.props.drscratch.FlowControl} readOnly max={3} /></Box>
+                    💖 人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box></Tooltip>
+                    <Tooltip title="電腦可以記住使用者目前的得分!">
                     <Box component="span" m={1} bgcolor="info.main">
-                    💖 人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box>
-                    <Box component="span" m={1} bgcolor="info.main">
-                    📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box>
+                    📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box></Tooltip>
+                    <Tooltip title="像旋轉木馬一樣，讓一個工作可以進行無限多次，或進行到你所需要的次數!">
                     <Box component="span" m={1} bgcolor="info.main" color="secondary.main">{drscratch_icon}
-                    等級: {this.props.drscratch.TotalScore} / 21</Box>
+                    等級: {this.props.drscratch.TotalScore} / 21</Box></Tooltip>
                 </Typography>
                 {level}
             </React.Fragment>
