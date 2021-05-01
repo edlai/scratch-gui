@@ -157,11 +157,22 @@ class DrScratchScore extends React.Component {
                     <Tooltip title="讓電腦充滿人性化，讓使用者的操作更加便利!">
                     <Box component="span" m={1} bgcolor="info.main">
                     💖 人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box></Tooltip>
-                    <Tooltip title="電腦可以使用或記住任何資料!如果會更改角色的資料的話，可以得到可以得到一顆星★。操作變數的話可以得到兩顆星★★。使用清單的話，可以得到三顆星★★★。">
+
+                    <HtmlTooltip
+                        title={
+                            <React.Fragment>
+                                <Typography color="inherit">電腦會使用或記住任何資料!</Typography>
+                                <ol>
+                                    <li>如果會更改角色的資料的話，可以得到可以得到一顆星★。</li>
+                                    <li>如果會操作變數的話可以得到兩顆星★★。</li>
+                                    <li>使用清單的話，可以得到三顆星★★★。</li>
+                                </ol>
+                            </React.Fragment>
+                        }
+                    >
                     <Box component="span" m={1} bgcolor="info.main">
-                    📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box></Tooltip>
-
-
+                    📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box>
+                    </HtmlTooltip>
                     <HtmlTooltip
                         title={
                             <React.Fragment>
