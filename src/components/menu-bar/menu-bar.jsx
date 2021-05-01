@@ -392,16 +392,17 @@ class MenuBar extends React.Component {
             >
                 <div className={styles.mainMenu}>
                     <div className={styles.fileGroup}>
-                        <div className={classNames(styles.menuBarItem)}>
-                        <Tooltip title="Click here to open Dr.Scratch">
+                    <div className={classNames(styles.menuBarItem)}>
                             <img
                                 alt="Scratch"
+                                className={classNames(styles.scratchLogo, {
+                                    [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
+                                })}
+                                draggable={false}
                                 src={this.props.logo}
                                 onClick={this.props.onClickLogo}
                             />
-                          </Tooltip>
                         </div>
-
                         {(this.props.canChangeLanguage) && (<div
                             className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                         >
@@ -484,70 +485,15 @@ class MenuBar extends React.Component {
                                 </MenuBarMenu>
                             </div>
                         )}
-                        <div
-                            className={classNames(styles.menuBarItem, styles.hoverable, {
-                                [styles.active]: this.props.editMenuOpen
-                            })}
-                            onMouseUp={this.props.onClickEdit}
-                        >
-                            <div className={classNames(styles.editMenu)}>
-                                <FormattedMessage
-                                    defaultMessage="Edit"
-                                    description="Text for edit dropdown menu"
-                                    id="gui.menuBar.edit"
-                                />
-                            </div>
-                            <MenuBarMenu
-                                className={classNames(styles.menuBarMenu)}
-                                open={this.props.editMenuOpen}
-                                place={this.props.isRtl ? 'left' : 'right'}
-                                onRequestClose={this.props.onRequestCloseEdit}
-                            >
-                                <DeletionRestorer>{(handleRestore, {restorable, deletedItem}) => (
-                                    <MenuItem
-                                        className={classNames({[styles.disabled]: !restorable})}
-                                        onClick={this.handleRestoreOption(handleRestore)}
-                                    >
-                                        {this.restoreOptionMessage(deletedItem)}
-                                    </MenuItem>
-                                )}</DeletionRestorer>
-                                <MenuSection>
-                                    <TurboMode>{(toggleTurboMode, {turboMode}) => (
-                                        <MenuItem onClick={toggleTurboMode}>
-                                            {turboMode ? (
-                                                <FormattedMessage
-                                                    defaultMessage="Turn off Turbo Mode"
-                                                    description="Menu bar item for turning off turbo mode"
-                                                    id="gui.menuBar.turboModeOff"
-                                                />
-                                            ) : (
-                                                <FormattedMessage
-                                                    defaultMessage="Turn on Turbo Mode"
-                                                    description="Menu bar item for turning on turbo mode"
-                                                    id="gui.menuBar.turboModeOn"
-                                                />
-                                            )}
-                                        </MenuItem>
-                                    )}</TurboMode>
-                                </MenuSection>
-                            </MenuBarMenu>
-                        </div>
+
                     </div>
                     <Divider className={classNames(styles.divider)} />
-                        <React.Fragment>
-                        <div className={classNames(styles.menuBarItem)}>
-                            <img
-                                alt="Dr.Scratch"
-                                draggable={false}
-                                src={drScratchLogo}
-                                onClick={this.props.onClickLogoDrScratch}
-                                style={{ width: "10%"}} />
-                                &nbsp;&nbsp;
-                                <DrScratchScore />
-                        </div>
-                        </React.Fragment>
+                    <React.Fragment>
+                    <div className={classNames(styles.menuBarItem)}>
+                      <DrScratchScore />
+                    </div>
+                    </React.Fragment>
                 </div>
-
                 {aboutButton}
             </Box>
         );

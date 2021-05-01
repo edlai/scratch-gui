@@ -37,6 +37,12 @@ import Venusaur from '../components/dr-scratch/300px-003Venusaur.png';
 import VenusaurMegaDream from '../components/dr-scratch/300px-003Venusaur-Mega_Dream.png';
 import drScratcIcon from '../components/dr-scratch/drscratch-icon.svg';
 
+import drScratchLogo from '../components/dr-scratch/drscratch-logo.svg';
+
+const onClickLogoDrScratch = () => {
+    window.location = "http://" + window.location.hostname + ":8000"
+};
+
 const theme = createMuiTheme({
   typography: {
     subtitle1: {
@@ -88,6 +94,8 @@ class DrScratchScore extends React.Component {
         let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
+        let drscratch_logo = <Box component="span" m={0}><Tooltip title="跳轉到 Dr.Scratch 網站"><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Tooltip></Box>;
+        
         let curr_url = window.location.hostname;
         let substring = "502";
 
@@ -95,25 +103,25 @@ class DrScratchScore extends React.Component {
             console.log("drscratch or c502");
         return (
             <React.Fragment>
+                {drscratch_logo}
                 <Typography component="div" variant="body1">
-                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
-                    抽象: <Rating size="small" name="read-only" value={this.props.drscratch.Abstraction} readOnly max={3} /></Box>
-                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
-                    平行: <Rating size="small" name="read-only" value={this.props.drscratch.Parallelization} readOnly max={3} /></Box>
-                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
-                    邏輯: <Rating size="small" name="read-only" value={this.props.drscratch.Logic} readOnly max={3} /></Box>
-                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
-                    同步: <Rating size="small" name="read-only" value={this.props.drscratch.Synchronization} readOnly max={3} /></Box>
-                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
-                    流程: <Rating size="small" name="read-only" value={this.props.drscratch.FlowControl} readOnly max={3} /></Box>
-                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
-                    人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box>
-                    <Box component="span" m={1} bgcolor="info.main">{drscratch_icon}
-                    資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box>
+                    <Box component="span" m={1} bgcolor="info.main">
+                    🔍 抽象: <Rating size="small" name="read-only" value={this.props.drscratch.Abstraction} readOnly max={3} /></Box>
+                    <Box component="span" m={1} bgcolor="info.main">
+                    🐙 平行: <Rating size="small" name="read-only" value={this.props.drscratch.Parallelization} readOnly max={3} /></Box>
+                    <Box component="span" m={1} bgcolor="info.main">
+                    🐶 邏輯: <Rating size="small" name="read-only" value={this.props.drscratch.Logic} readOnly max={3} /></Box>
+                    <Box component="span" m={1} bgcolor="info.main">
+                    🐢 同步: <Rating size="small" name="read-only" value={this.props.drscratch.Synchronization} readOnly max={3} /></Box>
+                    <Box component="span" m={1} bgcolor="info.main">
+                    🎠 流程: <Rating size="small" name="read-only" value={this.props.drscratch.FlowControl} readOnly max={3} /></Box>
+                    <Box component="span" m={1} bgcolor="info.main">
+                    💖 人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box>
+                    <Box component="span" m={1} bgcolor="info.main">
+                    📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box>
                     <Box component="span" m={1} bgcolor="info.main" color="secondary.main">{drscratch_icon}
                     等級: {this.props.drscratch.TotalScore} / 21</Box>
                 </Typography>
-                &nbsp;
                 {level}
             </React.Fragment>
         );
@@ -121,8 +129,7 @@ class DrScratchScore extends React.Component {
             console.log("501");
             return (            
                 <React.Fragment>
-
-                    <Typography component="div" variant="body1">☚ 選擇右邊圖案跳轉到 Dr.Scratch 網站</Typography>
+                  {drscratch_logo}
                 </React.Fragment>
         );
         }
@@ -145,7 +152,8 @@ DrScratchScore.propTypes = {
     onSaveFinished: PropTypes.func,
     projectFilename: PropTypes.string,
     saveProjectSb3: PropTypes.func,
-    setDrScratch: PropTypes.func
+    setDrScratch: PropTypes.func,
+    onClickLogoDrScratch: PropTypes.func,
     //drscratch: PropTypes.instanceOf(drScratch),
 };
 
