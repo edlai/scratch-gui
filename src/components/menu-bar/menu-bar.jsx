@@ -29,6 +29,7 @@ import DeletionRestorer from '../../containers/deletion-restorer.jsx';
 import TurboMode from '../../containers/turbo-mode.jsx';
 import MenuBarHOC from '../../containers/menu-bar-hoc.jsx';
 
+
 import {openTipsLibrary} from '../../reducers/modals';
 import {setPlayer} from '../../reducers/mode';
 import {
@@ -78,6 +79,7 @@ import sharedMessages from '../../lib/shared-messages';
 import DrScratch from '../../containers/drscratch.jsx';
 import DrScratchScore from '../../containers/drscratch-score.jsx';
 import drScratchLogo from '../dr-scratch/drscratch-logo.svg';
+import { Tooltip } from '@material-ui/core';
 
 const ariaMessages = defineMessages({
     language: {
@@ -391,16 +393,15 @@ class MenuBar extends React.Component {
                 <div className={styles.mainMenu}>
                     <div className={styles.fileGroup}>
                         <div className={classNames(styles.menuBarItem)}>
+                        <Tooltip title="Click here to open Dr.Scratch">
                             <img
                                 alt="Scratch"
-                                className={classNames(styles.scratchLogo, {
-                                    [styles.clickable]: typeof this.props.onClickLogo !== 'undefined'
-                                })}
-                                draggable={false}
                                 src={this.props.logo}
                                 onClick={this.props.onClickLogo}
                             />
+                          </Tooltip>
                         </div>
+
                         {(this.props.canChangeLanguage) && (<div
                             className={classNames(styles.menuBarItem, styles.hoverable, styles.languageMenu)}
                         >

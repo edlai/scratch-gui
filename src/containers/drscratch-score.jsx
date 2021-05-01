@@ -88,6 +88,11 @@ class DrScratchScore extends React.Component {
         let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
+        let curr_url = window.location.hostname;
+        let substring = "502";
+
+        if(curr_url.indexOf(substring) !== -1 || curr_url.indexOf("drscratch") !== -1){
+            console.log("drscratch or c502");
         return (
             <React.Fragment>
                 <Typography component="div" variant="body1">
@@ -110,13 +115,19 @@ class DrScratchScore extends React.Component {
                 </Typography>
                 &nbsp;
                 {level}
-
-
             </React.Fragment>
         );
+        }else{
+            console.log("501");
+            return (            
+                <React.Fragment>
+
+                    <Typography component="div" variant="body1">☚ 選擇右邊圖案跳轉到 Dr.Scratch 網站</Typography>
+                </React.Fragment>
+        );
+        }
     }
 }
-
 
 const getProjectFilename = (curTitle, defaultTitle) => {
     let filenameTitle = curTitle;
