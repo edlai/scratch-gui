@@ -7,6 +7,10 @@ import GreenFlag from '../green-flag/green-flag.jsx';
 import StopAll from '../stop-all/stop-all.jsx';
 import TurboMode from '../turbo-mode/turbo-mode.jsx';
 
+import Box from '@material-ui/core/Box';
+import Tooltip from '@material-ui/core/Tooltip';
+import Typography from '@material-ui/core/Typography';
+
 //import DrScratch from '../../containers/drscratch.jsx';
 
 import styles from './controls.css';
@@ -53,6 +57,7 @@ const Controls = function (props) {
             {turbo ? (
                 <TurboMode />
             ) : null}
+            <Box component="span" m={1}><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，點選左邊綠旗就可以看到你的運算思維分數。</marquee></Typography></Box>
         </div>
     );
 };

@@ -40,32 +40,67 @@ import drScratcIcon from '../components/dr-scratch/drscratch-icon.svg';
 import drScratchLogo from '../components/dr-scratch/drscratch-logo.svg';
 
 const onClickLogoDrScratch = () => {
-    window.location = "http://" + window.location.hostname + ":8000"
+    let new_url = "http://" + window.location.hostname + ":8000";
+    window.open(new_url, '_blank').focus();
 };
 
 const theme = createMuiTheme({
-  typography: {
-    subtitle1: {
-      fontSize: 12,
+    typography: {
+        subtitle1: {
+            fontSize: 12,
+        },
+        body1: {
+            fontWeight: 500,
+        },
+        button: {
+            fontStyle: 'italic',
+        },
     },
-    body1: {
-      fontWeight: 500,
-    },
-    button: {
-      fontStyle: 'italic',
-    },
-  },
 });
 
 const styles = {
     root: {
         flexGrow: 1,
-      },
-      paper: {
+    },
+    paper: {
         height: 140,
         width: 100,
-      }
-  };
+    }
+};
+
+const LightTooltip = withStyles((theme) => ({
+    tooltip: {
+        backgroundColor: theme.palette.common.white,
+        color: 'rgba(0, 0, 0, 0.87)',
+        boxShadow: theme.shadows[1],
+        fontSize: 11,
+    },
+}))(Tooltip);
+
+const useStylesBootstrap = makeStyles((theme) => ({
+    arrow: {
+        color: theme.palette.common.black,
+    },
+    tooltip: {
+        backgroundColor: theme.palette.common.black,
+    },
+}));
+
+function BootstrapTooltip(props) {
+    const classes = useStylesBootstrap();
+
+    return <Tooltip arrow classes={classes} {...props} />;
+}
+
+const HtmlTooltip = withStyles((theme) => ({
+    tooltip: {
+        backgroundColor: '#f5f5f9',
+        color: 'rgba(0, 0, 0, 0.87)',
+        maxWidth: 220,
+        fontSize: theme.typography.pxToRem(12),
+        border: '1px solid #dadde9',
+    },
+}))(Tooltip);
 
 class DrScratchScore extends React.Component {
     constructor (props) {
@@ -83,18 +118,18 @@ class DrScratchScore extends React.Component {
     render() {
         let level;
         if (this.props.drscratch.TotalScore >=21)
-            level = <Tooltip title="我是超級妙蛙花。我已經是是超極巨化了!"><img src={VenusaurMegaDream} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="我是超級妙蛙花。我已經是超極巨化了!"><img src={VenusaurMegaDream} style={{ width: "4%"}}/></Tooltip>;
         else if (this.props.drscratch.TotalScore >= 14 && this.props.drscratch.TotalScore < 21)
-            level = <Tooltip title="我是妙蛙花，等21以上我就會變成超級妙蛙花喔!"><img src={Venusaur} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="我是妙蛙花，等級21以上我就會變成超級妙蛙花喔!"><img src={Venusaur} style={{ width: "4%"}}/></Tooltip>;
         else if (this.props.drscratch.TotalScore >= 7 && this.props.drscratch.TotalScore < 14)
-            level = <Tooltip title="妙蛙草，等14以上我就會變成妙蛙花喔!"><img src={Ivysaur} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="我是妙蛙草，等級14以上我就會變成妙蛙花喔!等級21以上我就會變成超級妙蛙花!"><img src={Ivysaur} style={{ width: "4%"}}/></Tooltip>;
         else
-            level = <Tooltip title="我是妙蛙種子，等級7以上我就會變成妙蛙草喔!"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
+            level = <Tooltip title="我是妙蛙種子，等級7以上我就會變成妙蛙草喔!等級14以上我就會變成妙蛙花!等級21以上我就會變成超級妙蛙花!"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
         
         let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
-        let drscratch_logo = <Tooltip title="打開 Dr.Scratch 網站"><Box component="span" m={1}><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Box></Tooltip>;
+        let drscratch_logo = <Tooltip title="按下滑鼠左鍵，打開 Dr.Scratch 網站" arrow><Box component="span" m={1}><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Box></Tooltip>;
         
         let curr_url = window.location.hostname;
         let substring = "502";
@@ -105,15 +140,15 @@ class DrScratchScore extends React.Component {
             <React.Fragment>
                 {drscratch_logo}
                 <Typography component="div" variant="body1">
-                    <Tooltip title="用放大鏡將一個問題分解成一個個小問題。我們也可以用函式積木把相同的動作整理在一起。也可以善用分身的功能，把人物同時複製多份。"><Box component="span" m={1} bgcolor="info.main">
+                    <Tooltip title="用放大鏡將一個問題分解成一個個小問題。如果你的作品有兩個以上的角色與動作，可以得到一顆星★。如果有用到[函式積木]的功能把相同的動作整理在一起，可以得到兩顆星★★。你果你能善用[分身]的功能，可以得到三顆星★★★。"><Box component="span" m={1} bgcolor="info.main">
                     🔍 抽象: <Rating size="small" name="read-only" value={this.props.drscratch.Abstraction} readOnly max={3} /></Box></Tooltip>
                     <Tooltip title="電腦就像章魚一樣有很多手，一次可以同時進行很多件事!">
                     <Box component="span" m={1} bgcolor="info.main">
                     🐙 平行: <Rating size="small" name="read-only" value={this.props.drscratch.Parallelization} readOnly max={3} /></Box></Tooltip>
-                    <Tooltip title="電腦可以像狗狗一樣明辨是非，知道誰是好人，誰是壞人!">
+                    <Tooltip title="電腦可以像狗狗一樣精明，知道誰是好人，誰是壞人。用到 [如果] 的積木，可以得到一顆星★。用到 [如果-否則] 的積木，可以得到兩顆星★★。用到 [運算] 的積木，可以得到三顆星★★★">
                     <Box component="span" m={1} bgcolor="info.main">
                     🐶 邏輯: <Rating size="small" name="read-only" value={this.props.drscratch.Logic} readOnly max={3} /></Box></Tooltip>
-                    <Tooltip title="電腦跑得很快，我們可以讓電腦像烏龜一樣，暫停一下!">
+                    <Tooltip title="電腦跑得很快，如果跑得太快的話，我們可以讓電腦像烏龜一樣，跑慢一下!">
                     <Box component="span" m={1} bgcolor="info.main">
                     🐢 同步: <Rating size="small" name="read-only" value={this.props.drscratch.Synchronization} readOnly max={3} /></Box></Tooltip>
                     <Tooltip title="電腦可以像旋轉木馬一樣，把一個任務進行無限多次，你也可以設定你所需要的進行的次數!">
@@ -122,13 +157,24 @@ class DrScratchScore extends React.Component {
                     <Tooltip title="讓電腦充滿人性化，讓使用者的操作更加便利!">
                     <Box component="span" m={1} bgcolor="info.main">
                     💖 人性: <Rating size="small" name="read-only" value={this.props.drscratch.UserInteractivity} readOnly max={3} /></Box></Tooltip>
-                    <Tooltip title="電腦可以記住使用者目前的得分!">
+                    <Tooltip title="電腦可以使用或記住任何資料!如果會更改角色的資料的話，可以得到可以得到一顆星★。操作變數的話可以得到兩顆星★★。使用清單的話，可以得到三顆星★★★。">
                     <Box component="span" m={1} bgcolor="info.main">
                     📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box></Tooltip>
-                    <Tooltip title="這是你目前的的得分!">
+
+
+                    <HtmlTooltip
+                        title={
+                            <React.Fragment>
+                                <Typography color="inherit">這是你目前的的得分!!</Typography>
+                                得分越高，表示你的運算思維分數越高。
+                            </React.Fragment>
+                        }
+                    >
                     <Box component="span" m={1} bgcolor="info.main" color="secondary.main">{drscratch_icon}
-                    等級: {this.props.drscratch.TotalScore} / 21</Box></Tooltip>
+                    等級: {this.props.drscratch.TotalScore} / 21</Box>
+                    </HtmlTooltip>
                 </Typography>
+
                 {level}
             </React.Fragment>
         );
