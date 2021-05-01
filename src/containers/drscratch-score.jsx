@@ -136,7 +136,7 @@ class DrScratchScore extends React.Component {
             console.log("501");
             return (            
                 <React.Fragment>
-                  {drscratch_logo}
+                  {drscratch_logo} <Box component="span" m={1} bgcolor="info.main"><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，就把你的作品存檔，並將你的作品上傳到 Dr.Scratch 網站。看看你的運算思維得分。</marquee></Typography></Box>
                 </React.Fragment>
         );
         }
