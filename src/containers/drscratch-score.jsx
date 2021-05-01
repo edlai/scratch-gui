@@ -125,7 +125,7 @@ class DrScratchScore extends React.Component {
                     <Tooltip title="電腦可以記住使用者目前的得分!">
                     <Box component="span" m={1} bgcolor="info.main">
                     📋 資料: <Rating size="small" name="read-only" value={this.props.drscratch.DataRepresentation} readOnly max={3} /></Box></Tooltip>
-                    <Tooltip title="像旋轉木馬一樣，讓一個工作可以進行無限多次，或進行到你所需要的次數!">
+                    <Tooltip title="這是你目前的的得分!">
                     <Box component="span" m={1} bgcolor="info.main" color="secondary.main">{drscratch_icon}
                     等級: {this.props.drscratch.TotalScore} / 21</Box></Tooltip>
                 </Typography>
