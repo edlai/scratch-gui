@@ -145,9 +145,9 @@ class DrScratchScore extends React.Component {
                             <React.Fragment>
                                 <Typography color="inherit">✂️ 問題拆解與抽象化: 就像拿把剪刀一樣，透過觀察與思考把一個大問題分解成一個個小問題，把相同的小問題歸納在一起，然後一個一個小問題分頭處理。最後當所有的小問題解決的時候，大問題也一併解決了。</Typography>
                                 <ol>
-                                    <li>如果你的作品有兩個以上的角色與動作，可以得到一顆星星⭐。</li>
-                                    <li>如果有用到[函式積木]的功能把相同的動作整理在一起，可以得到兩顆星星⭐⭐。</li>
-                                    <li>你果你能善用[分身]的功能，可以得到三顆星星⭐⭐⭐。</li>
+                                    <li>如果你能得到一顆星星⭐，代表你的作品有兩個以上的「角色」與「動作」。</li>
+                                    <li>如果你能得到兩顆星星⭐⭐，代表你有用到「函式積木」的功能把相同的動作整理在一起。</li>
+                                    <li>如果你能得到三顆星星⭐⭐⭐，代表你能善用「當分身產生」等相關功能。</li>
                                 </ol>
                             </React.Fragment>
                         }
@@ -161,9 +161,9 @@ class DrScratchScore extends React.Component {
                             <React.Fragment>
                                 <Typography color="inherit">🐙平行處理: 電腦就像章魚一樣有很多手，一次可以同時進行很多件事!</Typography>
                                 <ol>
-                                    <li>能得到一顆星星⭐的學習者，代表會用到當 [當綠旗被點擊時]可以同時觸發兩個腳本 。</li>
-                                    <li>能得到兩顆星星⭐⭐的學習者，。</li>
-                                    <li>能得到三顆星星⭐⭐⭐的學習者。</li>
+                                    <li>如果你能得到一顆星星⭐的學習者，代表會用到當 「當綠旗被點擊時」可以同時觸發兩個腳本 。</li>
+                                    <li>如果你能得到兩顆星星⭐⭐的學習者，代表會用到「事件」中的兩個當 「當角色被點擊時」的積木。</li>
+                                    <li>如果你能得到三顆星星⭐⭐⭐的學習者。代表會用到「廣播訊息」與「當收到訊息」的積木。</li>
                                 </ol>
                             </React.Fragment>
                         }
@@ -176,9 +176,9 @@ class DrScratchScore extends React.Component {
                             <React.Fragment>
                                 <Typography color="inherit">🐶 邏輯判斷: 電腦可以像狗狗一樣精明，知道誰是好人，誰是壞人。</Typography>
                                 <ol>
-                                    <li>用到 [如果] 的積木，可以得到一顆星星⭐。</li>
-                                    <li>用到 [如果-否則] 的積木，可以得到兩顆星星⭐⭐。</li>
-                                    <li>用到 [運算] 的積木，可以得到三顆星星⭐⭐⭐。</li>
+                                    <li>如果你能得到一顆星星⭐的學習者，代表你有用到 「如果」 的積木。</li>
+                                    <li>如果你能得到兩顆星星⭐⭐的學習者，用到你有用到 「如果-否則」 的積木。</li>
+                                    <li>如果你能得到三顆星星⭐⭐⭐的學習者，用到你有用到 「運算」「或」的積木。</li>
                                 </ol>
                             </React.Fragment>
                         }
@@ -189,9 +189,11 @@ class DrScratchScore extends React.Component {
                     <HtmlTooltip
                         title={
                             <React.Fragment>
-                                <Typography color="inherit">🐢 同步處理:電腦跑得很快</Typography>
+                                <Typography color="inherit">🐢 同步處理:電腦跑得很快，我們來等一下</Typography>
                                 <ol>
-                                    <li>如果有的角色跑得太快的話，我們可以這個角色像烏龜一樣，等等其他的角色!</li>
+                                    <li>如果你能得到一顆星星⭐的學習者，代表你會用兩個循序動作的積木。</li>
+                                    <li>如果你能得到兩顆星星⭐⭐的學習者，用到你有用到 「重複」或「重複無限次」等相關的積木。</li>
+                                    <li>如果你能得到三顆星星⭐⭐⭐的學習者，用到你有用到 「重複直到」去組合一個「當某數大於某數」的積木。</li>
                                 </ol>
                             </React.Fragment>
                         }
@@ -202,9 +204,11 @@ class DrScratchScore extends React.Component {
                     <HtmlTooltip
                         title={
                             <React.Fragment>
-                                <Typography color="inherit">🎠 流程控制:電腦可以像旋轉木馬一樣，把一個任務進行無限多次。</Typography>
+                                <Typography color="inherit">🎠 流程控制(Flow Control):電腦可以像旋轉木馬一樣，把一個任務進行無限多次。</Typography>
                                 <ol>
-                                    <li>你也可以設定你所需要的進行的次數!</li>
+                                    <li>如果你能得到一顆星星⭐的學習者，代表你會用「等待」幾「秒」 的積木。</li>
+                                    <li>如果你能得到兩顆星星⭐⭐的學習者，用到你有用到 「停止全部」等相關的積木。</li>
+                                    <li>如果你能得到三顆星星⭐⭐⭐的學習者，用到你有用到 「重複直到」去組合一個「當某數大於某數」的積木。</li>
                                 </ol>
                             </React.Fragment>
                         }
@@ -217,7 +221,9 @@ class DrScratchScore extends React.Component {
                             <React.Fragment>
                                 <Typography color="inherit">💖 人性互動: 科技始終來自於人性!! </Typography>
                                 <ol>
-                                    <li>讓電腦充滿人性化，讓使用者的操作更加便利!</li>
+                                    <li>如果你能得到一顆星星⭐的學習者，代表會用到當 「當綠旗被點擊時」的程式積木。</li>
+                                    <li>如果你能得到兩顆星星⭐⭐的學習者，代表會能使用到當按鍵被按下、角色被點擊、詢問並等待單相關積木。</li>
+                                    <li>如果你能得到三顆星星⭐⭐⭐的學習者，代表會用到當某個條件成立的判斷式。</li>
                                 </ol>
                             </React.Fragment>
                         }
@@ -250,7 +256,7 @@ class DrScratchScore extends React.Component {
                                     <li>剛開始的等級是妙蛙草。</li>
                                     <li>等級 7 以上是成妙蛙花。</li>
                                     <li>等級 14 以上會變成妙蛙花。</li>
-                                    <li>等級 21 會變成超級妙蛙花!。</li>
+                                    <li>等級 21 會變成超級妙蛙花。</li>
                                 </ol>
                             </React.Fragment>
                         }
@@ -312,13 +318,3 @@ export default connect(
     mapDispatchToProps
 )(DrScratchScore);
 
-
-{/* <Button container className={styles.root} spacing={10}>分數: {this.props.drscratch.TotalScore}/21 </Button>
-<Button>等級: {this.props.drscratch.Level}   </Button>      
-<Paper>抽象化: {this.props.drscratch.Abstraction}</Paper>
-<Paper>平行化: {this.props.drscratch.Parallelization}  </Paper>
-<Paper>邏輯化: {this.props.drscratch.Logic}  </Paper>
-<Paper>同步化: {this.props.drscratch.Synchronization}  </Paper>
-<Paper>流程化: {this.props.drscratch.FlowControl}  </Paper>
-<Paper>人性化: {this.props.drscratch.UserInteractivity}  </Paper>
-<Paper>資料化: {this.props.drscratch.DataRepresentation}</Paper> */}
