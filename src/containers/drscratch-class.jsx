@@ -52,7 +52,6 @@ import {
 import {setRestore} from '../reducers/restore-deletion';
 import {showStandardAlert, closeAlertWithId} from '../reducers/alerts';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -68,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DrScratchClass() {
 
-  const [spacing, setSpacing] = React.useState(2);
+  const [spacing, setSpacing] = React.useState(0);
   const classes = useStyles();
 
   const handleChange = (event) => {
@@ -80,45 +79,47 @@ export default function DrScratchClass() {
       <CssBaseline />
       <Container maxWidth="lm">
         <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }}>
-          <Grid container className={classes.root} spacing={2}>
-          <Grid item xs={12}>
-              <Paper className={classes.control}>
-                <Grid container>
-                  <Grid item>
-                    <FormLabel>小丑魚找朋友</FormLabel>
-                    <RadioGroup
-                      name="小丑魚找朋友 (製作中)"
-                      aria-label="spacing"
-                      value={spacing.toString()}
-                      onChange={handleChange}
-                      row
-                    >
-                      {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21].map((value) => (
-                        <FormControlLabel
-                          key={value}
-                          value={value.toString()}
-                          control={<Radio />}
-                          label={value.toString()}
-                        />
-                      ))}
-                    </RadioGroup>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Grid>
-            <Grid item xs={12}>
-              <Grid container justify="center" spacing={spacing}>                
+          <Grid container className={classes.root} spacing={1}>
 
-<dl>
-  <dt>說明</dt>
-  <dd>- <div> <a href="static/samples/drscratch-class.pptx" target="_blank"> 小丑魚找朋友 (Power Point File) </a> </div></dd>
-  <dd>- <div> <a href="static/samples/drscratch-class.pdf" target="_blank">  小丑魚找朋友 (PDF)  </a> </div></dd>
-  <dt>範例程式</dt>
-  <dd>- <div> <a href="static/samples/fish000.sb3" target="_blank">  海裡一隻孤單的小丑魚  </a> </div></dd>
-  <dd>- <div> <a href="static/samples/fish001.sb3" target="_blank">  勇敢踏出第 N 步!  </a> </div></dd>
-  <dd>- <div> <a href="static/samples/fish002.sb3" target="_blank">  有人在嗎?  </a> </div></dd>
-  <dd>- <div> <a href="static/samples/fish003.sb3" target="_blank">  看旗號 (當綠旗被點擊)  </a> </div></dd>
-</dl>
+            <Grid item xs={12}>
+              <Grid container justify="center" spacing={spacing}>
+
+                說明
+                  <ol>
+                  <li> <a href="static/drscratch-class/drscratch-class.pptx" target="_blank"> 小丑魚找朋友 (Power Point File) </a> </li>
+                  <li> <a href="static/drscratch-class/drscratch-class.pdf" target="_blank">  小丑魚找朋友 (PDF)  </a> </li>
+                </ol>
+
+                  範例程式
+                    <ol start="0">
+                  <li><a href="static/drscratch-class/fish000.sb3" target="_blank">  一隻孤單的小丑魚  </a> </li>
+                  <li><a href="static/drscratch-class/fish001.sb3" target="_blank">  勇敢踏出第 N 步! </a></li>
+                  <li><a href="static/drscratch-class/fish000.sb3" target="_blank">  一隻孤單的小丑魚  </a> </li>
+
+
+
+                  <li> <a href="static/drscratch-class/fish001.sb3" target="_blank">  勇敢踏出第 N 步!  </a> </li>
+                  <li> <a href="static/drscratch-class/fish002.sb3" target="_blank">  有魚在嗎? </a> </li>
+                  <li> <a href="static/drscratch-class/fish003.sb3" target="_blank">  綠旗  </a> </li>
+                  <li> <a href="static/drscratch-class/fish004.sb3" target="_blank">  一直游 </a> </li>
+                  <li> <a href="static/drscratch-class/fish005.sb3" target="_blank">  游太快!!  </a> </li>
+                  <li> <a href="static/drscratch-class/fish006.sb3" target="_blank">  游多久了  </a> </li>
+                  <li> <a href="static/drscratch-class/fish007.sb3" target="_blank">  兩個綠旗  </a></li>
+                  <li> <a href="static/drscratch-class/fish008.sb3" target="_blank">  游來游去  </a></li>
+                  <li> <a href="static/drscratch-class/fish009.sb3" target="_blank">  找到同伴  </a></li>
+                  <li> <a href="static/drscratch-class/fish010.sb3" target="_blank">  多莉出現   </a> </li>
+                  <li> <a href="static/drscratch-class/fish011.sb3" target="_blank">  誰是主角  </a> </li>
+                  <li> <a href="static/drscratch-class/fish012.sb3" target="_blank">  玩遊戲  </a> </li>
+                  <li> <a href="static/drscratch-class/fish013.sb3" target="_blank">  Game Over </a> </li>
+                  <li> <a href="static/drscratch-class/fish014.sb3" target="_blank">  誰贏  </a> </li>
+                  <li> <a href="static/drscratch-class/fish015.sb3" target="_blank">  猜不到 </a> </li>
+                  <li> <a href="static/drscratch-class/fish016.sb3" target="_blank">  出現愛心 </a> </li>
+                  <li> <a href="static/drscratch-class/fish017.sb3" target="_blank">  天荒地老 </a> </li>
+                  <li> <a href="static/drscratch-class/fish018.sb3" target="_blank">  曾經擁有 </a> </li>
+                  <li> <a href="static/drscratch-class/fish019.sb3" target="_blank">  歷史紀錄 </a> </li>
+                  <li> <a href="static/drscratch-class/fish020.sb3" target="_blank">  或 </a> </li>
+                  <li> <a href="static/drscratch-class/fish021.sb3" target="_blank">  視訊 </a> </li>
+                </ol>
 
               </Grid>
             </Grid>
@@ -130,3 +131,5 @@ export default function DrScratchClass() {
     </React.Fragment>
   );
 }
+
+// <img src="static/drscratch-class/fish000.png" alt="logo" style={{ width: '50%', height: 200 }}/>

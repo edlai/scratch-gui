@@ -307,7 +307,7 @@ const GUIComponent = props => {
                                         onClick={onActivateDrScratchClassTab}
                                     >
                                         <FormattedMessage
-                                            defaultMessage="🐠&nbsp;課程"
+                                            defaultMessage="🐠&nbsp;&nbsp;課程"
                                             description="打開🐠&nbsp;課程"
                                             id="gui.gui.drscratchClassTab"
                                         />
