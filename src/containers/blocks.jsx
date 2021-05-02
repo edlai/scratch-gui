@@ -29,7 +29,8 @@ import {updateMetrics} from '../reducers/workspace-metrics';
 
 import {
     activateTab,
-    SOUNDS_TAB_INDEX
+    SOUNDS_TAB_INDEX,
+    CLASS_TAB_INDEX
 } from '../reducers/editor-tab';
 
 const addFunctionListener = (object, property, callback) => {
