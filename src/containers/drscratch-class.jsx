@@ -52,6 +52,7 @@ import {
 import {setRestore} from '../reducers/restore-deletion';
 import {showStandardAlert, closeAlertWithId} from '../reducers/alerts';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -84,9 +85,9 @@ export default function DrScratchClass() {
               <Paper className={classes.control}>
                 <Grid container>
                   <Grid item>
-                    <FormLabel>spacing</FormLabel>
+                    <FormLabel>小丑魚找朋友</FormLabel>
                     <RadioGroup
-                      name="小丑魚課程 (製作中)"
+                      name="小丑魚找朋友 (製作中)"
                       aria-label="spacing"
                       value={spacing.toString()}
                       onChange={handleChange}
@@ -106,12 +107,19 @@ export default function DrScratchClass() {
               </Paper>
             </Grid>
             <Grid item xs={12}>
-              <Grid container justify="center" spacing={spacing}>
-                {[0, 1, 2].map((value) => (
-                  <Grid key={value} item>
-                    <Paper className={classes.paper} />
-                  </Grid>
-                ))}
+              <Grid container justify="center" spacing={spacing}>                
+
+<dl>
+  <dt>說明</dt>
+  <dd>- <div> <a href="static/samples/drscratch-class.pptx" target="_blank"> 小丑魚找朋友 (Power Point File) </a> </div></dd>
+  <dd>- <div> <a href="static/samples/drscratch-class.pdf" target="_blank">  小丑魚找朋友 (PDF)  </a> </div></dd>
+  <dt>範例程式</dt>
+  <dd>- <div> <a href="static/samples/fish000.sb3" target="_blank">  海裡一隻孤單的小丑魚  </a> </div></dd>
+  <dd>- <div> <a href="static/samples/fish001.sb3" target="_blank">  勇敢踏出第 N 步!  </a> </div></dd>
+  <dd>- <div> <a href="static/samples/fish002.sb3" target="_blank">  有人在嗎?  </a> </div></dd>
+  <dd>- <div> <a href="static/samples/fish003.sb3" target="_blank">  看旗號 (當綠旗被點擊)  </a> </div></dd>
+</dl>
+
               </Grid>
             </Grid>
 
