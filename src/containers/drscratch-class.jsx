@@ -93,34 +93,28 @@ export default function DrScratchClass() {
                   範例程式
                     <ol start="0">
                   <li><a href="static/drscratch-class/fish000.sb3" target="_blank">  一隻孤單的小丑魚  </a> </li>
-                  <li><a href="static/drscratch-class/fish001.sb3" target="_blank">  勇敢踏出第 N 步! </a></li>
-                  <li><a href="static/drscratch-class/fish000.sb3" target="_blank">  一隻孤單的小丑魚  </a> </li>
-
-
-
-                  <li> <a href="static/drscratch-class/fish001.sb3" target="_blank">  勇敢踏出第 N 步!  </a> </li>
+                  <li> <a href="static/drscratch-class/fish001.sb3" target="_blank">  勇敢踏出第幾步!  </a> </li>
                   <li> <a href="static/drscratch-class/fish002.sb3" target="_blank">  有魚在嗎? </a> </li>
                   <li> <a href="static/drscratch-class/fish003.sb3" target="_blank">  綠旗  </a> </li>
                   <li> <a href="static/drscratch-class/fish004.sb3" target="_blank">  一直游 </a> </li>
-                  <li> <a href="static/drscratch-class/fish005.sb3" target="_blank">  游太快!!  </a> </li>
-                  <li> <a href="static/drscratch-class/fish006.sb3" target="_blank">  游多久了  </a> </li>
+                  <li> <a href="static/drscratch-class/fish005.sb3" target="_blank">  慢慢游  </a> </li>
+                  <li> <a href="static/drscratch-class/fish006.sb3" target="_blank">  <s>游多久</s> (操作時間不夠同學請先跳過) </a> </li>
                   <li> <a href="static/drscratch-class/fish007.sb3" target="_blank">  兩個綠旗  </a></li>
                   <li> <a href="static/drscratch-class/fish008.sb3" target="_blank">  游來游去  </a></li>
                   <li> <a href="static/drscratch-class/fish009.sb3" target="_blank">  找到同伴  </a></li>
                   <li> <a href="static/drscratch-class/fish010.sb3" target="_blank">  多莉出現   </a> </li>
                   <li> <a href="static/drscratch-class/fish011.sb3" target="_blank">  誰是主角  </a> </li>
-                  <li> <a href="static/drscratch-class/fish012.sb3" target="_blank">  玩遊戲  </a> </li>
-                  <li> <a href="static/drscratch-class/fish013.sb3" target="_blank">  Game Over </a> </li>
-                  <li> <a href="static/drscratch-class/fish014.sb3" target="_blank">  誰贏  </a> </li>
-                  <li> <a href="static/drscratch-class/fish015.sb3" target="_blank">  猜不到 </a> </li>
-                  <li> <a href="static/drscratch-class/fish016.sb3" target="_blank">  出現愛心 </a> </li>
+                  <li> <a href="static/drscratch-class/fish012.sb3" target="_blank">  來玩遊戲  </a> </li>
+                  <li> <a href="static/drscratch-class/fish013.sb3" target="_blank">  遊戲結束 </a> </li>
+                  <li> <a href="static/drscratch-class/fish014.sb3" target="_blank">  誰贏誰輸  </a> </li>
+                  <li> <a href="static/drscratch-class/fish015.sb3" target="_blank">  猜不到，好好玩 </a> </li>
+                  <li> <a href="static/drscratch-class/fish016.sb3" target="_blank">  出現獎賞 </a> </li>
                   <li> <a href="static/drscratch-class/fish017.sb3" target="_blank">  天荒地老 </a> </li>
-                  <li> <a href="static/drscratch-class/fish018.sb3" target="_blank">  曾經擁有 </a> </li>
-                  <li> <a href="static/drscratch-class/fish019.sb3" target="_blank">  歷史紀錄 </a> </li>
-                  <li> <a href="static/drscratch-class/fish020.sb3" target="_blank">  或 </a> </li>
-                  <li> <a href="static/drscratch-class/fish021.sb3" target="_blank">  視訊 </a> </li>
+                  <li> <a href="static/drscratch-class/fish018.sb3" target="_blank">  只在乎 - 曾經擁有 </a> </li>
+                  <li> <a href="static/drscratch-class/fish019.sb3" target="_blank">  之前誰贏 </a> </li>
+                  <li> <a href="static/drscratch-class/fish020.sb3" target="_blank">  雙重判斷 </a> </li>
+                  <li> <a href="static/drscratch-class/fish021.sb3" target="_blank">  跟著動 </a> </li>
                 </ol>
-
               </Grid>
             </Grid>
 

@@ -38,6 +38,16 @@ const Controls = function (props) {
         turbo,
         ...componentProps
     } = props;
+
+    let drscratch_tip;
+
+    let curr_url = window.location.hostname;
+    let substring = "502";
+
+    if(curr_url.indexOf(substring) !== -1 || curr_url.indexOf("drscratch") !== -1){
+        console.log("drscratch or c502");
+        drscratch_tip = 1;
+    }
     return (
         <div
             className={classNames(styles.controlsContainer, className)}
@@ -57,7 +67,10 @@ const Controls = function (props) {
             {turbo ? (
                 <TurboMode />
             ) : null}
-            <Box component="span" m={1}><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，點選左邊綠旗就可以看到你的運算思維分數。</marquee></Typography></Box>
+
+            { drscratch_tip ? (
+                <Box component="span" m={1}><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，點選左邊綠旗就可以看到你的運算思維分數。</marquee></Typography></Box>
+            ) : null}
         </div>
     );
 };
