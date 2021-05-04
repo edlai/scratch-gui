@@ -250,11 +250,11 @@ class DrScratchScore extends React.Component {
                     <HtmlTooltip
                         title={
                             <React.Fragment>
-                                <Typography color="inherit">這是你目前的的得分!!</Typography>
-                                得分越高，表示你的運算思維分數越高。右邊的圖案也會隨著你的運算思維能力而更動成不同的圖案。
+                                <Typography color="inherit">這是你目前的的積分!!</Typography>
+                                積分越高，右邊的圖案也會隨著你棒不棒而換成不同的圖案。
                                 <ol>
-                                    <li>剛開始的等級是妙蛙草。</li>
-                                    <li>等級 7 以上是成妙蛙花。</li>
+                                    <li>剛開始的等級是妙蛙種子。</li>
+                                    <li>等級 7 以上是成妙蛙草。</li>
                                     <li>等級 14 以上會變成妙蛙花。</li>
                                     <li>等級 21 會變成超級妙蛙花。</li>
                                 </ol>
@@ -274,7 +274,7 @@ class DrScratchScore extends React.Component {
             console.log("501");
             return (            
                 <React.Fragment>
-                  {drscratch_logo} <Box component="span" m={1} bgcolor="info.main"><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，就把你的作品存檔，並將你的作品上傳到 Dr.Scratch 網站。看看你的運算思維得分。</marquee></Typography></Box>
+                  {drscratch_logo} <Box component="span" m={1} bgcolor="info.main"><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，就把你的作品存檔，並上傳到 Dr.Scratch(Scratch小老師)網站。讓我們看看你棒不棒。</marquee></Typography></Box>
                 </React.Fragment>
         );
         }
