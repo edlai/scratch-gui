@@ -129,7 +129,7 @@ class DrScratchScore extends React.Component {
         let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
-        let drscratch_logo = <Tooltip title="Dr.Scratch可以幫你的作品評分。按下滑鼠左鍵，就可以打開 Dr.Scratch 網站" arrow><Box component="span" m={1}><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Box></Tooltip>;
+        let drscratch_logo = <Tooltip title="Scratch 小老師(Dr.Scratch)可以幫你的作品評分。按下滑鼠左鍵，就可以打開 Scratch 小老師 (Dr.Scratch) 網站。" arrow><Box component="span" m={1}><img alt="Dr.Scratch" draggable={false} src={drScratchLogo} onClick={onClickLogoDrScratch} /></Box></Tooltip>;
         
         let curr_url = window.location.hostname;
         let substring = "502";
@@ -274,7 +274,7 @@ class DrScratchScore extends React.Component {
             console.log("501");
             return (            
                 <React.Fragment>
-                  {drscratch_logo} <Box component="span" m={1} bgcolor="info.main"><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，就把你的作品存檔，並上傳到 Dr.Scratch(Scratch小老師)網站。讓我們看看你棒不棒。</marquee></Typography></Box>
+                  {drscratch_logo} <Box component="span" m={1} bgcolor="info.main"><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，就把你的作品存檔，並上傳到 Scratch小老師(Dr.Scratch)網站。讓我們看看你棒不棒。</marquee></Typography></Box>
                 </React.Fragment>
         );
         }

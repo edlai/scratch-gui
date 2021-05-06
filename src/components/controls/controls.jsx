@@ -69,7 +69,7 @@ const Controls = function (props) {
             ) : null}
 
             { drscratch_tip ? (
-                <Box component="span" m={1}><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，點選左邊綠旗就可以看到你的運算思維分數。</marquee></Typography></Box>
+                <Box component="span" m={1}><Typography component="div" variant="body1"><marquee>👈 當完成一個作品後，點選左邊綠旗就可以看到 Scratch 小老師 (Dr.Scratch) 給你的評分(若從電腦上傳作品，分數不會即時更新，須按下綠旗才會更新)&nbsp;&nbsp;(分數更新需耗費一點時間，分數若無即時更新，按下綠旗後請稍等一下)。</marquee></Typography></Box>
             ) : null}
         </div>
     );

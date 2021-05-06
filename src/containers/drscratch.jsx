@@ -106,7 +106,7 @@ class DrScratch extends React.Component {
         render() {
             return (
                 <div>
-                <Tooltip title="選此透過 Dr.Scratch 進行專案即時評量" aria-label="add">
+                <Tooltip title="選此透過 Scratch小老師(Dr.Scratch) 進行專案即時評量" aria-label="add">
                 <Button uppercase={false} type="button" onClick={this.handleClick}>
                 <img src={drScratcIcon} style={{ width: "10%"}} /> 
                 <Typography>&nbsp; Dr.Scratch &nbsp; </Typography>
