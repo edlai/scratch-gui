@@ -74,6 +74,14 @@ export default function DrScratchClass() {
     setSpacing(Number(event.target.value));
   };
 
+  let curr_url = window.location.hostname;
+  let substring = "502";
+
+  let quiz_link = <a href="https://forms.gle/GFqxsq8hmizDRvs56" target="_blank"> 問卷 (控制組) </a>;
+  if(curr_url.indexOf(substring) !== -1 || curr_url.indexOf("drscratch") !== -1){
+    console.log("drscratch or c502");
+    quiz_link = <a href="https://forms.gle/75LaRuw1i9JuUj2u5" target="_blank"> 問卷 (實驗組) </a>;
+  }
   return (
     <React.Fragment>
       <CssBaseline />
@@ -84,11 +92,14 @@ export default function DrScratchClass() {
             <Grid item xs={12}>
               <Grid container justify="center" spacing={spacing}>
 
-                說明
+                             
+                說明與問卷
                   <ol>
+                  <li>  {quiz_link} </li>
                   <li> <a href="static/drscratch-class/drscratch-class.pptx" target="_blank"> 小丑魚找朋友 (Power Point File) </a> </li>
                   <li> <a href="static/drscratch-class/drscratch-class.pdf" target="_blank">  小丑魚找朋友 (PDF)  </a> </li>
                 </ol>
+
 
                   範例程式
                     <ol start="0">
