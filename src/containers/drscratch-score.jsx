@@ -117,6 +117,7 @@ class DrScratchScore extends React.Component {
 
     render() {
         let level;
+	   /*
         if (this.props.drscratch.TotalScore >=21)
             level = <Tooltip title="我是超極巨化的超級妙蛙花!我是最強的!!"><img src={VenusaurMegaDream} style={{ width: "4%"}}/></Tooltip>;
         else if (this.props.drscratch.TotalScore >= 14 && this.props.drscratch.TotalScore < 21)
@@ -125,7 +126,7 @@ class DrScratchScore extends React.Component {
             level = <Tooltip title="我是妙蛙草，等級14以上我就會變成妙蛙花喔!等級21以上我就會變成超級妙蛙花!"><img src={Ivysaur} style={{ width: "4%"}}/></Tooltip>;
         else
             level = <Tooltip title="我是妙蛙種子，等級7以上我就會變成妙蛙草喔!等級14以上我就會變成妙蛙花!等級21以上我就會變成超級妙蛙花!"><img src={Bulbasaur} style={{ width: "4%"}}/></Tooltip>;
-        
+        */
         let level_define = <Tooltip title="妙蛙種子">等級: </Tooltip>;
         let drscratch_icon = <img src={drScratcIcon} style={{ width: "2%"}} />;
 
